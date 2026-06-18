@@ -5,6 +5,13 @@
     <title>YouTube Link Click</title>
 </head>
 <body>
-    <a href="https://www.youtube.com/watch?v=83C3TZ4Zm_o&list=RD83C3TZ4Zm_o&start_radio=1" onclick="window.location.href = this.href;">YouTube 링크 클릭</a>
+    <a href="https://www.youtube.com/watch?v=83C3TZ4Zm_o&list=RD83C3TZ4Zm_o&start_radio=1">YouTube 링크 클릭</a>
+
+    <script>
+        document.querySelector('a').addEventListener('click', function(event) {
+            event.preventDefault(); // 링크를 클릭했을 때 기본 동작을 방지
+            window.location.href = this.href; // 링크를 클릭했을 때 새 페이지로 이동
+        });
+    </script>
 </body>
 </html>
